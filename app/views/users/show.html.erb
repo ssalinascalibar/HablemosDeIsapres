@@ -1,5 +1,28 @@
-<h2> <%= @user.name %> <%= @user.last_name %> </h2>
-<h3> <%= @user.gender %> </h3>
-<h3> Sueldo Mayor a $1.000.000: <%= @user.salary %> </h3>
-<h3> <%= @user.city_id %> </h3>
-<p> creado hace: <%= time_ago_in_words @user.created_at %> </p>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <h3> <%= @user.name %> <%= @user.last_name %> </h3>
+                </thead>
+
+                <tr>     
+                    <td> <%= @user.gender %> </td>
+                </tr>    
+                 
+                <tr> 
+                    <td> Sueldo Mayor a $1.000.000: <%= @user.salary %> </td>
+                </tr>
+                 
+                <tr>
+                    <td> <%= @user.city_id %> </td>
+                </tr>
+                
+                <tr>    
+                    <td> <p> Resgistrado hace: <%= time_ago_in_words @user.created_at %> </p> </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
