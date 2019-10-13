@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :customers
 # es bloque de rutas es reemplazado por resources :users
 =begin
 get 'users', to: 'users#index' #muestra todos los usuarios
