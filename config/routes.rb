@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :users #ruta REST, es lo mismo que las rutas de arriba, pero con menos codigo  
+  resources :users #ruta REST, es lo mismo que las rutas de arriba, pero con menos codigo
+  root to: 'users#new'  
   devise_for :customers
 
 
