@@ -1,0 +1,48 @@
+<div class="container">
+
+    <div class="row">
+
+        <div class="col">
+
+        
+            <%= form_with model: @user, local: true do |f|  %>
+
+                <p>   
+                    <%= f.label :name, "Nombre" %>
+                    <%= f.text_field :name  %>
+                
+                    <%= f.label :last_name, "Apellido" %>
+                    <%= f.text_field :last_name  %>
+                </p>
+                    
+                <p>
+                    <%= f.label :gender, "Femenino" %>
+                    <%= f.radio_button :gender, "Femenino" %>
+                    <%= f.label :gender, "Masculino" %>
+                    <%= f.radio_button :gender, "Masculino" %>
+                </p>
+                    
+                
+                    <h4>
+                    <%= f.label :salary, "Su Sueldo es mayor a 1.000.000?" %>
+                    <%= f.label :salary, "Si" %>
+                    <%= f.radio_button :salary, "true"  %>
+                    <%= f.label :salary, "No" %>
+                    <%= f.radio_button :salary, "false"  %>
+                    </h4>
+                
+
+                <div class="field">
+                    <%= f.label :city_id, "Ciudad" %>
+                    <%= f.text_field :city_id %>
+                </div>    
+                    
+                    <%= f.submit "Enviar"  %>
+
+            <% end %>
+
+        </div>    
+
+    </div>    
+
+</div>

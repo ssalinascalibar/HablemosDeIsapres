@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  isapre: MyString
+  user: one
+
+two:
+  isapre: MyString
+  user: two

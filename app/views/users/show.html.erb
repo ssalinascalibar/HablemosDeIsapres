@@ -1,0 +1,5 @@
+<h2> <%= @user.name %> <%= @user.last_name %> </h2>
+<h3> <%= @user.gender %> </h3>
+<h3> Sueldo Mayor a $1.000.000: <%= @user.salary %> </h3>
+<h3> <%= @user.city_id %> </h3>
+<p> creado hace: <%= time_ago_in_words @user.created_at %> </p>
