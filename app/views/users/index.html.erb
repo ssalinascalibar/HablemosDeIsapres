@@ -8,7 +8,10 @@
                 
                 <div class="col-md-4">
                     <div class="card">
-                    <%= user.name %> <%= user.last_name %>
+                        <div class="body">
+                        <h5> <%= user.name %> <%= user.last_name %> </h5>
+                        <%= link_to "Obtener", "#", class: 'btn btn-success' %>
+                        </div>
                     </div>
                 </div>
 
