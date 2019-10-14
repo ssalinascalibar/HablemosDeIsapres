@@ -10,7 +10,10 @@
                 <p>   
                     <%= f.label :name, "Nombre" %>
                     <%= f.text_field :name  %>
+                </p>
+
                 
+                <p>
                     <%= f.label :last_name, "Apellido" %>
                     <%= f.text_field :last_name  %>
                 </p>
@@ -32,12 +35,14 @@
                     </h4>
                 
 
-                <div class="field">
+                <p>
                     <%= f.label :city_id, "Ciudad" %>
                     <%= f.text_field :city_id %>
-                </div>    
+                </p>    
                     
+                <p>
                     <%= f.submit "Enviar"  %>
+                </p>    
 
             <% end %>
 
