@@ -14,15 +14,22 @@
 
                 <p>   
                     <%= f.label :name, "Nombre" %>
-                    <%= f.text_field :name  %>
+                    <%= f.text_field :name, class: 'form-control' %>
                 </p>
 
                 
                 <p>
                     <%= f.label :last_name, "Apellido" %>
-                    <%= f.text_field :last_name  %>
+                    <%= f.text_field :last_name, class: 'form-control'  %>
                 </p>
                     
+                
+                <p>
+                    <%= f.label :city_id, "Ciudad" %>
+                    <%= f.text_field :city_id, class: 'form-control' %>
+                </p>    
+
+
                 <p>
                     <%= f.label :gender, "Femenino" %>
                     <%= f.radio_button :gender, "Femenino" %>
@@ -38,15 +45,9 @@
                     <%= f.label :salary, "No" %>
                     <%= f.radio_button :salary, "false"  %>
                     </h4>
-                
-
-                <p>
-                    <%= f.label :city_id, "Ciudad" %>
-                    <%= f.text_field :city_id %>
-                </p>    
                     
                 <p>
-                    <%= f.submit "Enviar"  %>
+                    <%= f.submit "Enviar", class: 'btn btn-primary'  %>
                 </p>    
 
             <% end %>
