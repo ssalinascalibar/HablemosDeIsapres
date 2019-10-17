@@ -26,7 +26,8 @@
                 
                 <p>
                     <%= f.label :city_id, "Ciudad" %>
-                    <%= f.select :city_id, [["Santiago", 1],["Rancagua", 2],["Chillán", 3]]
+                    <%= f.select :city_id, ([['Santiago', 1],['Rancagua', 2],
+                        ['Chillán', 3]]), {}, class: 'form-control'
                      %>
                 </p>    
 
