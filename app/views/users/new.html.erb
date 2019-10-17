@@ -26,7 +26,8 @@
                 
                 <p>
                     <%= f.label :city_id, "Ciudad" %>
-                    <%= f.text_field :city_id, class: 'form-control' %>
+                    <%= f.select :city_id, [["Santiago", 1],["Rancagua", 2],["Chillán", 3]]
+                     %>
                 </p>    
 
 
@@ -44,7 +45,7 @@
                     <%= f.radio_button :salary, "true"  %>
                     <%= f.label :salary, "No" %>
                     <%= f.radio_button :salary, "false"  %>
-                </h4>
+                    </h4>
                     
                 <p>
                     <%= f.submit "Enviar", class: 'btn btn-primary'  %>
