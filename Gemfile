@@ -9,6 +9,7 @@ gem 'rails', '~> 5.2.2'
 gem 'sqlite3'
 
 gem 'devise', git: 'https://github.com/plataformatec/devise.git'
+gem 'jquery-rails'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
