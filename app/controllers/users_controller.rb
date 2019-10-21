@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 
     private
     def user_params #strong params, permite asignación masiva de los parametros señalados bajo el scope :user
-        params.require(:user).permit(:name, :last_name, :gender, :salary, :city_id)            
+        params.require(:user).permit(:name, :last_name, :rut, :age, :phone, :email, :isapre_actual, :gender, :salary, :city_id)            
     end    
 
 end
