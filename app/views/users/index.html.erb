@@ -8,8 +8,12 @@
                 
                 <div class="col-md-4">
                     <div class="card">
+                        <h4> <%= user.name %> <%= user.last_name %> </h4>
+                        
                         <div class="body">
-                        <h5> <%= user.name %> <%= user.last_name %> </h5>
+                        <p> Ciudad : <%= user.city_id %> </p>    
+                        <p> Isapre actual : <%= user.isapre_actual %> </p>
+                        <p> Sueldo mayor a $1.000.000 ? : <%= user.salary %> </p> 
                         <%= link_to "Obtener", "#", class: 'btn btn-success' %>
                         </div>
                     </div>
