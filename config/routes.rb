@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-
+    
+    root to: 'users#index'
   resources :users #ruta REST, es lo mismo que las rutas de arriba, pero con menos codigo
-  root to: 'users#index'  
+    
   devise_for :customers
-
+    
 
 # este bloque de rutas es reemplazado por resources :users
 =begin
