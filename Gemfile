@@ -6,7 +6,8 @@ ruby '2.4.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: :development #esta gema se usará para entorno solo de desarrollo es decir local
+gem 'pg', group: :production # y 'pg' posgressql se usará para entorno de producción, por ejemplo para subir a Heroku
 
 gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 gem 'jquery-rails'
