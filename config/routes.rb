@@ -1,9 +1,21 @@
 Rails.application.routes.draw do
     
-    root to: 'users#index'
   resources :users #ruta REST, es lo mismo que las rutas de arriba, pero con menos codigo
     
-  devise_for :customers
+  
+  devise_for :customers # todas las rutas para devise
+  
+  devise_scope :customers do # este bloque se agrega para devise, root es users#new pero al autenticar no lleva al users#index, hay 2 root mienstras se esté o no autenticado
+
+    authenticated  do
+            root to: 'users#index'
+         end
+
+        unauthenticated do
+              root 'users#new'
+        end
+
+    end
     
 
 # este bloque de rutas es reemplazado por resources :users
