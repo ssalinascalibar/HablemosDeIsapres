@@ -8,9 +8,10 @@
                 
                 <div class="col-md-4">
                     <div class="card">
-                        <h4> <%= user.name %> <%= user.last_name %> </h4>
+                        <!-- Aquí va una imagen standard del usuario-->
                         
-                        <div class="body">
+                        <div class="card-body">
+                        <h4 class="card-title"> <%= user.name %> <%= user.last_name %> </h4>    
                         <p> Ciudad : <%= user.city_id %> </p>    
                         <p> Isapre actual : <%= user.isapre_actual %> </p>
                         <p> Sueldo mayor a $1.000.000 ? : <%= user.salary %> </p> 
