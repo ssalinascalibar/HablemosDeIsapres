@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hablemosdeisapre</title>
+    <title>Hablemosdeisapres</title>
     <%= csrf_meta_tags %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,11 +15,14 @@
 
     
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   
   </head>
 
   <body>
     <%= render 'layouts/navbar' %>
+
 
     <% if notice.present? %>
       <div class="alert alert-success" role="alert">
@@ -33,6 +36,9 @@
       </div>
     <% end %>
 
+
+
     <%= yield %>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
