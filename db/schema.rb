@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_21_195815) do
+ActiveRecord::Schema.define(version: 2019_11_07_153652) do
 
   create_table "cities", force: :cascade do |t|
     t.string "city"
@@ -18,6 +18,16 @@ ActiveRecord::Schema.define(version: 2019_10_21_195815) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["region_id"], name: "index_cities_on_region_id"
+  end
+
+  create_table "customer_orders", force: :cascade do |t|
+    t.integer "customer_id"
+    t.integer "user_id"
+    t.boolean "payed", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["customer_id"], name: "index_customer_orders_on_customer_id"
+    t.index ["user_id"], name: "index_customer_orders_on_user_id"
   end
 
   create_table "customers", force: :cascade do |t|

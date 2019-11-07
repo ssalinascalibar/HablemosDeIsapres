@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer: one
+  user: one
+  payed: false
+
+two:
+  customer: two
+  user: two
+  payed: false
