@@ -10,4 +10,10 @@ class CustomerOrdersController < ApplicationController
         redirect_to users_path, alert: 'NO ha podido obtener a un usuario'
     end    
   end
+
+  def index
+    @custom_orders = current_customer.customer_orders
+      
+  end
+
 end

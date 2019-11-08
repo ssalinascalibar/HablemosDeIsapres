@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   get 'customer_orders/create'
   resources :users do #ruta REST, es lo mismo que las rutas de arriba, pero con menos codigo
     resources :customer_orders, only: :create
-  end  
+  end
+
+  resources :customer_orders, only: :index #creamos la ruta solo del index para customer_orders  
   
   devise_for :customers # todas las rutas para devise
   

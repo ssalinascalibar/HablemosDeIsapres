@@ -1,0 +1,8 @@
+<table class="table">
+<% @custom_orders.each do |order| %>
+    <tr>
+        <td> <%= order.user.name %> </td>
+        <td> <%= order.user.last_name %> </td>
+    </tr>
+<% end %>
+</table>

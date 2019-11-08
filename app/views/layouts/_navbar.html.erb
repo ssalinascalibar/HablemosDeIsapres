@@ -12,9 +12,11 @@
         <a class="nav-link" href="#">Features</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <% if customer_signed_in? %>
+        <a class="nav-link" href="<%= customer_orders_path%>">Mi Carro</a>
+        <% end %>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown"> 
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           
           <% if customer_signed_in? %>
