@@ -7,10 +7,12 @@
             <% row.each do |user| %>
                 
                 <div class="col-md-4">
-                    <div class="card">
-                        <i class='far fa-user' style='font-size:50px'></i>
+                    <div class="card bg-light mb-3">
+
+                        <div class="card-header">
+                        <i class='far fa-user' style='font-size:45px'></i>
                         <!-- Aquí va una imagen standard del usuario-->
-                        
+                        </div>
                         
                         <div class="card-body">
                         <h4 class="card-title"> <%= user.name %> <%= user.last_name %> </h4>    
