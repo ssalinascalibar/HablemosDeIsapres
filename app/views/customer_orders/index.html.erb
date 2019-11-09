@@ -1,8 +1,22 @@
 <table class="table">
-<% @custom_orders.each do |order| %>
-    <tr>
-        <td> <%= order.user.name %> </td>
-        <td> <%= order.user.last_name %> </td>
-    </tr>
-<% end %>
+    <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Ciudad</th>
+          <th scope="col">Isapre Actual</th>
+          <th scope="col">Pago</th>
+        </tr>
+    </thead>
+    
+    <% @custom_orders.each do |order| %>
+    <tbody>
+        <tr>
+            <td> <%= order.user.name %> </td>
+            <td> <%= order.user.last_name %> </td>
+            <td> <%= order.user.city_id %> </td>
+            <td> <%= order.user.isapre_actual %> </td>
+        </tr>
+    </tbody>    
+    <% end %>
 </table>
