@@ -2,8 +2,7 @@ class UsersController < ApplicationController
     before_action :authenticate_customer!, only: [:index] # antes de entrar al users#index debo autenticarme
     
     def index
-        @user = User.all
-        @city = City.all        
+        @user = User.all        
     end
 
 

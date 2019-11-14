@@ -7,4 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 City.destroy_all
-cities = City.create([{ city: 'Santiago'}, { city: 'Rancagua'}])
+cities = City.create([{ city: 'Santiago'}, { city: 'Rancagua' }])
