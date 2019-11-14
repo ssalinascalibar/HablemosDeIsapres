@@ -48,9 +48,11 @@
 
                 
                 <p>
-                    <%= f.label :city_id, "Ciudad" %>
-                    <%= f.select :city_id, [["Selecciona"],["Santiago", 1],["Rancagua", 2],
-                        ["Chillán", 3]], {}, class: 'form-control'%>
+                    <%= f.label :city_id, "Ciudad:" %>
+                    <%= f.select :city_id, options_for_select(City.all.map{|s|[s.city, s.id]}), class: 'form-control' %>    
+
+                    <%# <%= f.select :city_id, [["Selecciona"],["Santiago", 1],["Rancagua", 2],
+                        ["Chillán", 3]], {}, class: 'form-control'%> 
                 </p>    
 
 
