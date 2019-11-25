@@ -5,6 +5,6 @@ class User < ApplicationRecord
   has_many :customer_orders
   has_many :customers, through: :customer_orders
 
-  #belongs_to :city # usurio pertenece 1 ciudad
+  belongs_to :city # usuario pertenece a 1 ciudad, esto permite mostrar el string de la ciudad en la vista de index users
 
 end
