@@ -12,8 +12,7 @@ class CustomerOrdersController < ApplicationController
   end
 
   def index
-    @custom_orders = current_customer.customer_orders
-      
+    @custom_orders = current_customer.customer_orders #todas las ordenes(custom_orders) de un customer
   end
 
 end
