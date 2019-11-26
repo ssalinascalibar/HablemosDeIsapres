@@ -3,6 +3,7 @@
         <tr>
           <th scope="col">Nombre</th>
           <th scope="col">Apellido</th>
+          <th scope="col">Edad</th>
           <th scope="col">Ciudad</th>
           <th scope="col">Isapre Actual</th>
           <th scope="col">Pago</th>
@@ -14,7 +15,8 @@
         <tr>
             <td> <%= order.user.name %> </td>
             <td> <%= order.user.last_name %> </td>
-            <td> <%= order.user.city_id %> </td>
+            <td> <%= order.user.age %> </td>
+            <td> <%= order.user.city.city %> </td>
             <td> <%= order.user.isapre_actual %> </td>
         </tr>
     </tbody>    
