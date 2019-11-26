@@ -18,9 +18,20 @@
                         <h4 class="card-title"> <%= user.name %> <%= user.last_name %> </h4>
 
                         <p> Ciudad : <%= user.city.city %> </p>       
+                        
                         <p> Isapre actual : <%= user.isapre_actual %> </p>
-                        <p> Sueldo mayor a $1.000.000 ? : <%= user.salary %> </p> 
-                        <%= link_to "Obtener", user_customer_orders_path(user), class: 'btn btn-success', method: :post %>
+                        
+                        <p> Sueldo mayor a $1.000.000 ? : <%= user.salary %> </p>
+
+
+                        <% if current_customer %> 
+                        
+                        <p> <%= link_to "Obtener", user_customer_orders_path(user), class: 'btn btn-success', method: :post %> </p>
+                        
+                        <p> <%= link_to "Borrar", user_customer_order_path(user, current_customer), class: 'btn btn-danger', method: :delete %> </p>
+                        
+                        <% end %>
+
                         </div>
                     </div>
                 </div>

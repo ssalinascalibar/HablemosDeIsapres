@@ -15,4 +15,15 @@ class CustomerOrdersController < ApplicationController
     @custom_orders = current_customer.customer_orders #todas las ordenes(custom_orders) de un customer
   end
 
+  def destroy
+    @user = User.find(params[:user_id]) #buscamos primero el objeto o al usuario
+    @custom_order = CustomerOrder.where(user: @user, customer: current_customer)
+    if @custom_order.first.destroy
+       redirect_to users_path, alert: 'El Usuario ha sido eliminado de su selección'
+    else
+       redirect_to users_path, notice: 'El Usuario ha sido añadido a su selección'
+    end             
+  
+  end
+
 end
