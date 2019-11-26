@@ -4,6 +4,7 @@
         
         <% @user.each_slice(3) do |row| %>
             
+            <div class="w-100"> </div>
             <% row.each do |user| %>
                 
                 <div class="col-md-4">
@@ -26,9 +27,9 @@
 
                         <% if current_customer %> 
                         
-                        <p> <%= link_to "Obtener", user_customer_orders_path(user), class: 'btn btn-success', method: :post %> </p>
+                        <p> <%= link_to "Agregar", user_customer_orders_path(user), class: 'btn btn-primary', method: :post %>
                         
-                        <p> <%= link_to "Borrar", user_customer_order_path(user, current_customer), class: 'btn btn-danger', method: :delete %> </p>
+                         <%= link_to "Quitar", user_customer_order_path(user, current_customer), class: 'btn btn-danger', method: :delete %> </p>
                         
                         <% end %>
 
