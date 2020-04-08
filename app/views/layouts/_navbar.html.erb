@@ -16,7 +16,7 @@
       </li>
       <li class="nav-item">
         <% if customer_signed_in? %>
-        <a class="nav-link" href="<%= customer_orders_path%>">Mi Carro <strong> : <%= current_customer.customer_orders.count %> adquiridos </strong></a>
+        <a class="nav-link" href="<%= customer_orders_path%>">Mi Lista <strong> : <%= current_customer.customer_orders.count %> adquiridos </strong></a>
         <% end %>
       </li>
       <li class="nav-item dropdown"> 
