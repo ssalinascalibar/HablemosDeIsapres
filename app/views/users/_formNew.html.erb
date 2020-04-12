@@ -2,81 +2,85 @@
 
     
         <div class="row">
-
-            <div class="col-12 col-md-5">
-
-                <p>   
-                    <%= f.label :name, "Nombre" %>
-                    <%= f.text_field :name, class: 'form-control' %>
-                </p>
-
-                
-                <p>
-                    <%= f.label :last_name, "Apellido" %>
-                    <%= f.text_field :last_name, class: 'form-control'  %>
-                </p>
-
-                <p>
-                    <%= f.label :rut, "Rut" %>
-                    <%= f.number_field :rut, class: 'form-control'  %>
-                </p>
-                
-                <p>
-                    <%= f.label :age, "Edad" %>
-                    <%= f.number_field :age, class: 'form-control'  %>
-                </p>
-
-                <p>
-                    <%= f.label :phone, "Fono" %>
-                    <%= f.number_field :phone, class: 'form-control'  %>
-                </p>
-            </div>
-
-
-            <div class="col-12 col-md-5">
-
-                <p>
-                    <%= f.label :email, "Correo electrónico" %>
-                    <%= f.text_field :email, class: 'form-control'  %>
-                </p>
-
-
-                <p>
-                    <%= f.label :isapre_actual, "Su Isapre actual" %>
-                    <%= f.text_field :isapre_actual, class: 'form-control'  %>
-                </p>
-
-                
-                <p>
-                    <%= f.label :city_id, "Ciudad" %>
-                    <%= f.select :city_id, options_for_select(City.all.map{|c|[c.city, c.id]}), {}, class: 'form-control' %>    
-
-                    <%# <%= f.select :city_id, [["Selecciona"],["Santiago", 1],["Rancagua", 2],
-                        ["Chillán", 3]], {}, class: 'form-control'%> 
-                </p>    
-
-
-                <p>
-                    <%= f.label :gender, "Femenino" %>
-                    <%= f.radio_button :gender, "Femenino" %>
-                    <%= f.label :gender, "Masculino" %>
-                    <%= f.radio_button :gender, "Masculino" %>
-                </p>
-                    
-                
-                <h5>
-                    <%= f.label :salary, "Su Sueldo es mayor a 1.000.000?" %>
-                    <%= f.label :salary, "Si" %>
-                    <%= f.radio_button :salary, "true"  %>
-                    <%= f.label :salary, "No" %>
-                    <%= f.radio_button :salary, "false"  %>
-                </h5>
-                    
-                <p>
-                    <%= f.submit "Enviar", class: 'btn btn-primary'  %>
-                </p>
             
-            </div>
+            <div class="w-100"> </div> 
+            
+                <div class="col-12 col-md-5">
+
+                    <p>   
+                        <%= f.label :name, "Nombre" %>
+                        <%= f.text_field :name, class: 'form-control' %>
+                    </p>
+
+                    
+                    <p>
+                        <%= f.label :last_name, "Apellido" %>
+                        <%= f.text_field :last_name, class: 'form-control'  %>
+                    </p>
+
+                    <p>
+                        <%= f.label :rut, "Rut" %>
+                        <%= f.number_field :rut, class: 'form-control'  %>
+                    </p>
+                    
+                    <p>
+                        <%= f.label :age, "Edad" %>
+                        <%= f.number_field :age, class: 'form-control'  %>
+                    </p>
+
+                    <p>
+                        <%= f.label :phone, "Fono" %>
+                        <%= f.number_field :phone, class: 'form-control'  %>
+                    </p>
+                </div>
+
+
+                <div class="col-12 col-md-5">
+
+                    <p>
+                        <%= f.label :email, "Correo electrónico" %>
+                        <%= f.text_field :email, class: 'form-control'  %>
+                    </p>
+
+
+                    <p>
+                        <%= f.label :isapre_actual, "Su Isapre actual" %>
+                        <%= f.text_field :isapre_actual, class: 'form-control'  %>
+                    </p>
+
+                    
+                    <p>
+                        <%= f.label :city_id, "Ciudad" %>
+                        <%= f.select :city_id, options_for_select(City.all.map{|c|[c.city, c.id]}), {}, class: 'form-control' %>    
+
+                        <%# <%= f.select :city_id, [["Selecciona"],["Santiago", 1],["Rancagua", 2],
+                            ["Chillán", 3]], {}, class: 'form-control'%> 
+                    </p>    
+
+
+                    <p>
+                        <%= f.label :gender, "Femenino" %>
+                        <%= f.radio_button :gender, "Femenino" %>
+                        <%= f.label :gender, "Masculino" %>
+                        <%= f.radio_button :gender, "Masculino" %>
+                    </p>
+                        
+                    
+                    <h5>
+                        <%= f.label :salary, "Su Sueldo es mayor a 1.000.000?" %>
+                        <%= f.label :salary, "Si" %>
+                        <%= f.radio_button :salary, "true"  %>
+                        <%= f.label :salary, "No" %>
+                        <%= f.radio_button :salary, "false"  %>
+                    </h5>
+                        
+                    <p>
+                        <%= f.submit "Enviar", class: 'btn btn-primary'  %>
+                    </p>
+                
+                </div>
+            
+            <div class="w-100"> </div>
         
         </div>
     
