@@ -66,13 +66,10 @@
                     </p>
                         
                     
-                    <h5>
-                        <%= f.label :salary, "Su Sueldo es mayor a 1.000.000?" %>
-                        <%= f.label :salary, "Si" %>
-                        <%= f.radio_button :salary, "true"  %>
-                        <%= f.label :salary, "No" %>
-                        <%= f.radio_button :salary, "false"  %>
-                    </h5>
+                    <p>
+                        <%= f.label :salary, "Renta Bruta Aproximada" %>
+                        <%= f.text_field :salary, class: 'form-control', placeholder: '$' %>
+                    </p>
                         
                     <p>
                         <%= f.submit "Enviar", class: 'btn btn-primary'  %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_12_012638) do
+ActiveRecord::Schema.define(version: 2020_04_14_015920) do
 
   create_table "cities", force: :cascade do |t|
     t.string "city"
@@ -64,11 +64,11 @@ ActiveRecord::Schema.define(version: 2020_04_12_012638) do
     t.integer "phone"
     t.string "email"
     t.string "gender"
-    t.boolean "salary"
     t.integer "city_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "isapre_actual"
+    t.string "salary"
     t.index ["city_id"], name: "index_users_on_city_id"
   end
 
