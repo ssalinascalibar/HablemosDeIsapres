@@ -5,6 +5,7 @@
         <% @user.each_slice(3) do |row| %>
             
             <div class="w-100"> </div>
+            
             <% row.each do |user| %>
                 
                 <div class="col-md-4">
@@ -16,37 +17,42 @@
                         </div>
                         
                         <div class="card-body">
-                        <h4 class="card-title"> <%= user.name %> <%= user.last_name %> </h4>
+                            <h4 class="card-title"> <%= user.name %> <%= user.last_name %> </h4>
 
-                        <p> Ciudad : <%= user.city.city %> </p>       
-                        
-                        <p> Isapre actual : <%= user.isapre_actual %> </p>
-                        
-                        <p> Sueldo mayor a $1.000.000 ? : <%= user.salary %> </p>
-
-                        
-
-
-                        <% if current_customer %>
+                            <p> Ciudad : <%= user.city.city %> </p>       
                             
+                            <p> Isapre actual : <%= user.isapre_actual %> </p>
+                            
+                            <p> Sueldo mayor a $1.000.000 ? : <%= user.salary %> </p>
+
+
+                            
+
+
+                            <% if current_customer  %>
                                 
-                                <p> <%= link_to "Agregar a mi lista", user_customer_orders_path(user), class: 'btn btn-primary', method: :post %>
-                                   
+                                <% if user.check_customer_order(current_customer) %>
                                     
-                                
-                                
-                                 <%= link_to "Quitar de mi lista", user_customer_order_path(user, current_customer), class: 'btn btn-danger', method: :delete %>
-                                 </p>
-                                
-                                 
-                            
-                        <% end %>
+                                    
+                                    <%= link_to "Quitar de mi lista", user_customer_order_path(user, current_customer), class: 'btn btn-danger', method: :delete, data:{confirm:'Estás Seguro,este usuario se quitará de tu lista?' } %>
+
+                                <% else %>
+
+                                     <%= link_to "Agregar a mi lista", user_customer_orders_path(user), class: 'btn btn-primary', method: :post %>
+                                    
+                                       
+                                <% end %> 
+                                       
+                                       
+                                        
+                            <% end %>
 
                         </div>
                     </div>
                 </div>
 
             <% end %>
+            
             <div class="w-100"> </div>
 
         <% end %>
