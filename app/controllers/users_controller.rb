@@ -16,8 +16,12 @@ class UsersController < ApplicationController
         # ByeBug, utilizarlo solo para revisar el metodo en consola 
         
         @user = User.new(user_params) #se crea un user a partir de los params que vienen bajo el scope de user
-        @user.save #guarda el formulario con los datos del usuario
-        redirect_to new_user_path            
+        if @user.save #guarda el formulario con los datos del usuario
+        redirect_to new_user_path, notice: 'Un Ejecutivo se contactará con usted'
+        else
+        redirect_to new_user_path, alert: 'No si ha podido enviar su solicitud, por favor reintentar'
+        end    
+            
     end
 
     def show
