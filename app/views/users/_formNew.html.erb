@@ -29,7 +29,7 @@
                     </p>
 
                     <p>
-                        <%= f.label :phone, "Fono" %>
+                        <%= f.label :phone, "Teléfono fijo o celular" %>
                         <%= f.number_field :phone, class: 'form-control'  %>
                     </p>
                 </div>
@@ -44,8 +44,8 @@
 
 
                     <p>
-                        <%= f.label :isapre_actual, "Su Isapre actual" %>
-                        <%= f.text_field :isapre_actual, class: 'form-control'  %>
+                        <%= f.label :isapre_actual, "Cúal es la Isapre actual a la que pertenece ?" %>
+                        <%= f.text_field :isapre_actual, class: 'form-control', placeholder: 'Indique su Isapre actual'  %>
                     </p>
 
                     
@@ -67,7 +67,7 @@
                     -->    
                     
                     <p>
-                        <%= f.label :salary, "Renta Bruta Aproximada" %>
+                        <%= f.label :salary, "Cúal es su renta bruta aproximada?" %>
                         <%= f.text_field :salary, class: 'form-control', placeholder: '$' %>
                     </p>
                         
