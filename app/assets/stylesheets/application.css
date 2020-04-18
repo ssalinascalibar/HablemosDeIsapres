@@ -20,8 +20,7 @@
 }
 
  footer{
-    background-color: #0F2644;
-    height: 20vh;
+    background-color: #2F4560;
     bottom: 0;
     color: white;
        
@@ -30,6 +29,10 @@
 .copyright{
     text-align: center;
     padding-top: 10px;
+}
+
+.redes-sociales{
+    text-align: center;
 }
 
 
