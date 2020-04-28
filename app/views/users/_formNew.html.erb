@@ -59,7 +59,9 @@
                     
                     <p>
                         <%= f.label :city_id, "Ciudad" %>
-                        <%= f.select :city_id, options_for_select(City.all.map{|c|[c.city, c.id]}), {}, class: 'form-control' %>    
+                        <%= f.select :city_id, options_for_select(City.all.map{|c|[c.city, c.id]}), {}, class: 'custom-select' %> <!-- se modifica class: a custom-select para recibir todo el array de ciudades -->   
+
+
 
                         <%# <%= f.select :city_id, [["Selecciona"],["Santiago", 1],["Rancagua", 2],
                             ["Chillán", 3]], {}, class: 'form-control'%> 

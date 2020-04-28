@@ -7,4 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 City.destroy_all
-cities = City.create([{ city: 'Santiago'}, { city: 'Rancagua' }])
+cities = City.create([{ city: 'Arica' }, { city: 'Iquique' }, { city: 'Antofagasta' }, 
+                    { city: 'Calama' }, { city: 'Copiapó' }, { city: 'Coquimbo' }, 
+                    { city: 'La Serena' }, { city: 'Ovalle' }, { city: 'Valparaiso' }, 
+                    { city: 'Viña del Mar' }, { city: 'Quillota' }, { city: 'La Calera' }, 
+                    { city: 'Santiago' }, { city: 'Rancagua' }, { city: 'San Fernando' }, 
+                    { city: 'Santa Cruz' }, { city: 'Talca' }, { city: 'Linares' }, 
+                    { city: 'Temuco' }, { city: 'Villarrica' }, { city: 'Valdivia' }, 
+                    { city: 'Puerto Montt' }, { city: 'Puerto Varas' }, { city: 'Castro' }, 
+                    { city: 'Coihaique' }, { city: 'Punta Arenas' }])
