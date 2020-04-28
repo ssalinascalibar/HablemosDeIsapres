@@ -1,24 +1,36 @@
-<table class="table">
-    <thead>
-        <tr>
-          <th user="col">Nombre</th>
-          <th user="col">Apellido</th>
-          <th user="col">Edad</th>
-          <th user="col">Ciudad</th>
-          <th user="col">Isapre Actual</th>
-          <th user="col">Enviar Solicitud de Pago</th>
-        </tr>
-    </thead>
-    
-    <% @custom_orders.each do |order| %>
-    <tbody>
-        <tr>
-            <td> <%= order.user.name %> </td>
-            <td> <%= order.user.last_name %> </td>
-            <td> <%= order.user.age %> </td>
-            <td> <%= order.user.city.city %> </td>
-            <td> <%= order.user.isapre_actual %> </td>
-        </tr>
-    </tbody>    
-    <% end %>
-</table>
+
+      <table class="table">
+          <thead>
+              <tr>
+                <th user="col">Nombre</th>
+                <th user="col">Apellido</th>
+                <th user="col">Rut</th>
+                <th user="col">Edad</th>
+                <th user="col">Fono</th>
+                <th user="col">Email</th>
+                <th user="col">Ciudad</th>
+                <th user="col">Isapre Actual</th>
+                <th user="col">Renta bruta Apróx</th>
+              </tr>
+          </thead>
+          
+          <% @custom_orders.each do |order| %>
+          <tbody>
+              <tr>
+                  <td> <%= order.user.name %> </td>
+                  <td> <%= order.user.last_name %> </td>
+                  <td> <%= order.user.rut %> </td>
+                  <td> <%= order.user.age %> </td>
+                  <td> <%= order.user.phone %> </td>
+                  <td> <%= order.user.email %> </td>
+                  <td> <%= order.user.city.city %> </td>
+                  <td> <%= order.user.isapre_actual %> </td>
+                  <td> <%= order.user.salary %> </td>
+              </tr>
+          </tbody>    
+          <% end %>
+      </table>
+
+
+
+   
