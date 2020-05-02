@@ -16,3 +16,7 @@ cities = City.create([{ city: 'Selecciona la Ciudad donde resides' }, { city: 'A
                     { city: 'Temuco' }, { city: 'Villarrica' }, { city: 'Valdivia' }, 
                     { city: 'Puerto Montt' }, { city: 'Puerto Varas' }, { city: 'Castro' }, 
                     { city: 'Coihaique' }, { city: 'Punta Arenas' }])
+
+
+Customer.destroy_all
+customers = Customer.create([{ email: 'prueba1@hotmail.com', password: '333333' }, { email: 'prueba23@hotmail.com', password: '111111' }])
