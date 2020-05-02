@@ -19,4 +19,5 @@ cities = City.create([{ city: 'Selecciona la Ciudad donde resides' }, { city: 'A
 
 
 Customer.destroy_all
-customers = Customer.create([{ email: 'prueba1@hotmail.com', password: '333333' }, { email: 'prueba23@hotmail.com', password: '111111' }])
+customers = Customer.create([{ email: 'naty.olivos4@gmail.com', password: '123456' }, { email: 'ssalinascalibar@gmail.com', password: '123456' }])
+
