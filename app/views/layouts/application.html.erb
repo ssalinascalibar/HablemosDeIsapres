@@ -23,13 +23,9 @@
   <body>
     <%= render 'layouts/navbar' %>
 
-    <!-- Botón Whatsapp -->
-    <div class="btn-whatsapp">
+    <%= render 'layouts/whatsapp' %>
+    
 
-      <a href="https://wa.me/56965009491/?text= Hola, Hablemos de Isapres. Necesito orientación" target="_blank"> <%= image_tag 'whatsapp.png', class: 'logo-whatsapp', alt: 'logo-whatsapp' %> </a>
-      
-    </div>
-    <!-- Fin botón Whatsapp -->
 
     <% if notice.present? %>
       <div class="alert alert-success" role="alert">
